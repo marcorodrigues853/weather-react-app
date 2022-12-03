@@ -1,32 +1,76 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
+import Card from './components/base/Card'
+import Header from './components/header/Header'
+import Detailed from './components/weather/Detailed'
+import Now from './components/weather/Now'
+import List from './components/weather/List'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const forecast = [
+    {
+      date: new Date('03/12/2022'),
+      state: 'Sunny',
+      temperature: { min: 10, max: 18 },
+      wind: '12 km/h',
+      humidity: '60%',
+      cloudy: '60%',
+    },
+    {
+      date: new Date('04/12/2022'),
+      state: 'Humidity',
+      temperature: { min: 10, max: 18 },
+      wind: '12 km/h',
+      humidity: '60%',
+      cloudy: '60%',
+    },
+    {
+      date: new Date('05/12/2022'),
+      state: 'Cloudy',
+      temperature: { min: 10, max: 18 },
+      wind: '12 km/h',
+      humidity: '60%',
+      cloudy: '60%',
+    },
+    {
+      date: new Date('06/12/2022'),
+      state: 'Sunny',
+      temperature: { min: 10, max: 18 },
+      wind: '12 km/h',
+      humidity: '60%',
+      cloudy: '60%',
+    },
+    {
+      date: new Date('07/12/2022'),
+      state: 'Storm',
+      temperature: { min: 10, max: 18 },
+      wind: '12 km/h',
+      humidity: '60%',
+      cloudy: '60%',
+    },
+    {
+      date: new Date('08/12/2022'),
+      state: 'Storm',
+      temperature: { min: 10, max: 18 },
+      wind: '12 km/h',
+      humidity: '60%',
+      cloudy: '60%',
+    },
+    {
+      date: new Date('09/12/2022'),
+      state: 'Lightning',
+      temperature: { min: 10, max: 18 },
+      wind: '12 km/h',
+      humidity: '60%',
+      cloudy: '60%',
+    },
+  ]
 
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header />
+      <Now forecast={forecast[0]} />
+      <Detailed />
+      <List forecast={forecast} />
     </div>
   )
 }

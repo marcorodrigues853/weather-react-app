@@ -1,7 +1,7 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: rem;
   text-align: center;
 }
 
@@ -37,5 +37,132 @@
 }
 
 .read-the-docs {
-  color: #888;
+  color: #888;1
+} */
+
+.button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+button:hover {
+  scale: 1.2;
+}
+.card {
+  /* min-height: 3rem; */
+  background-color: #fff;
+  border-radius: 9px;
+  box-shadow: 0 0.5rem 0.8rem rgb(0 0 0 / 15%);
+  margin: 2rem 0;
+  padding: 0.8rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 1rem;
+}
+
+.item-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.item__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.d-flex-center-around {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.now {
+  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  /* justify-content: space-around; */
+  color: #fff;
+  /* height: 130px; */
+}
+
+.now__day {
+  color: currentColor;
+  font-size: 0.8rem;
+}
+.now__unit {
+  font-size: 2rem;
+}
+.now__state {
+  color: currentColor;
+  font-size: 0.8rem;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 2rem;
+}
+
+.item-type {
+  font-size: 0.7rem;
+  color: #89919e;
+}
+
+.item-detail {
+  font-size: 0.9rem;
+  color: #2f3744;
+}
+
+.item__next {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 2.5rem;
+}
+
+.item__next:not(:last-child) {
+  border-bottom: 1px solid #f1f3f9;
+  /* padding-bottom: 1rem; */
+}
+.item__next--state {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 101px;
+}
+
+.city-title {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #2f3744;
+}
+
+.week-day {
+}
+
+.unit {
+  color: #a1c4fd;
+  font-size: 1rem;
+}
+.state {
+  color: #89919e;
 }
