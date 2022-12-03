@@ -72,11 +72,13 @@ function App() {
     <div className="App">
       <div className="container">
         <Header />
-        <Daily forecast={forecast}></Daily>
         <Now forecast={forecast[0]} />
         <Detailed />
         <List forecast={forecast} />
       </div>
+      //! need to be a component
+      <span>DAILY MENU falta passar comp</span>
+      <Daily forecast={forecast}></Daily>
       <Menu></Menu>
     </div>
   )
