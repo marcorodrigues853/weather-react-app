@@ -75,13 +75,15 @@ function App() {
         <Now forecast={forecast[0]} />
         <Detailed />
         <List forecast={forecast} />
-      </div>
-      {/* //! need to be a component */}
-      <span>DAILY MENU falta passar comp</span>
-      <Daily forecast={forecast}></Daily>
+        {/* //! need to be a component */}
+        <span>DAILY MENU falta passar comp</span>
+        <Daily forecast={forecast}></Daily>
 
-      {/* //! need to be a component */}
-      <span>WEEKLY MENU falta passar comp</span>
+        {/* //! need to be a component */}
+        <span>WEEKLY MENU falta passar comp</span>
+        <Daily forecast={forecast}></Daily>
+      </div>
+
       <Menu></Menu>
     </div>
   )
