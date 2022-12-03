@@ -6,6 +6,8 @@ import Now from './components/weather/Now'
 import List from './components/weather/List'
 import Menu from './components/menu/Menu'
 
+import Daily from './components/weather/daily/Daily'
+
 function App() {
   const forecast = [
     {
@@ -70,6 +72,7 @@ function App() {
     <div className="App">
       <div className="container">
         <Header />
+        <Daily forecast={forecast}></Daily>
         <Now forecast={forecast[0]} />
         <Detailed />
         <List forecast={forecast} />

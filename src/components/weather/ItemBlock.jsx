@@ -14,10 +14,12 @@ function ItemBlock({ icon, state, unit }) {
   // console.log('STATEEEE', images.cloudy)
   return (
     <div className="item-block">
-      <ion-icon
-        name={icon}
-        style={{ fontSize: 28, color: '#A3B7D7' }}
-      ></ion-icon>
+      {icon && (
+        <ion-icon
+          name={icon}
+          style={{ fontSize: 28, color: '#A3B7D7' }}
+        ></ion-icon>
+      )}
 
       {/* <img src={images[state]} alt="" /> */}
 
