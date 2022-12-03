@@ -40,6 +40,9 @@
   color: #888;1
 } */
 
+.container {
+  padding: 1rem;
+}
 .button {
   cursor: pointer;
   border: none;
@@ -114,6 +117,8 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   min-height: 2rem;
+  max-height: 19rem;
+  overflow: scroll;
 }
 
 .item-type {
@@ -165,4 +170,23 @@ button:hover {
 }
 .state {
   color: #89919e;
+}
+
+/* MENU REGION */
+.menu {
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.3rem;
+  background-color: #fff;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+}
+
+.App {
+  position: relative;
+  height: 100vh;
 }

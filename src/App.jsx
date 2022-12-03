@@ -4,6 +4,7 @@ import Header from './components/header/Header'
 import Detailed from './components/weather/Detailed'
 import Now from './components/weather/Now'
 import List from './components/weather/List'
+import Menu from './components/menu/Menu'
 
 function App() {
   const forecast = [
@@ -67,10 +68,13 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <Now forecast={forecast[0]} />
-      <Detailed />
-      <List forecast={forecast} />
+      <div className="container">
+        <Header />
+        <Now forecast={forecast[0]} />
+        <Detailed />
+        <List forecast={forecast} />
+      </div>
+      <Menu></Menu>
     </div>
   )
 }
