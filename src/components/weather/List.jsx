@@ -9,8 +9,9 @@ function List({ forecasts }) {
   const list = forecasts[0].list.map((forecast, index) => (
     <ListItem
       key={index}
-      date={new Date(forecast.dt).getDate()}
+      date={forecast.dt}
       state={forecast.weather[0].description}
+      icon={forecast.weather[0].icon}
     ></ListItem>
   ))
 

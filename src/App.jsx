@@ -1658,7 +1658,6 @@ function App() {
         <Header />
 
         {/* //! need to be a component */}
-        <span>WEEKLY MENU falta passar comp</span>
 
         {/* <Weekly forecast={forecast}></Weekly> */}
 
