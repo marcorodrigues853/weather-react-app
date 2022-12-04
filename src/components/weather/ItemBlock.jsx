@@ -5,7 +5,12 @@ import humidity from './../../assets/icons-png/humidity.png'
 function ItemBlock({ icon, state, unit }) {
   return (
     <div className="item-block">
-      {icon && <img src={icon} alt="" />}
+      {icon && (
+        <ion-icon
+          name={icon}
+          style={{ fontSize: 28, color: '#A3B7D7' }}
+        ></ion-icon>
+      )}
       <div className="item__box">
         <div className="item-type">{state}</div>
         <div className="item-detail">{unit}</div>
