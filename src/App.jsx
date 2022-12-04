@@ -1,7 +1,7 @@
 import './App.css'
 import Header from './components/header/Header'
-import Detailed from './components/weather/Detailed'
-import Now from './components/weather/Now'
+
+import Today from './components/weather/Today'
 import List from './components/weather/List'
 import Menu from './components/menu/Menu'
 
@@ -1671,16 +1671,9 @@ function App() {
       <div className="container">
         <Header />
 
-        <Now forecast={currentWeather} />
-
-        <Detailed />
-        <List forecasts={forecasts} />
-
-        {/* //! need to be a component */}
+        <Today currentWeather={currentWeather} forecasts={forecasts}></Today>
 
         <Daily currentWeather={currentWeather} forecasts={forecasts}></Daily>
-
-        {/* //! need to be a component */}
         <Weekly forecasts={forecasts}></Weekly>
       </div>
 
