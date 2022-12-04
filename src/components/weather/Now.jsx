@@ -7,7 +7,8 @@ function Now({ forecast }) {
           <use xlinkHref={icon}></use>
         </svg> */}
 
-      <img src={icon} alt="" />
+      {/* <img src={icon} alt="" /> */}
+      <img src="http://openweathermap.org/img/wn/02d@2x.png" alt="" />
 
       <div className="info">
         <div className="now__day">{forecast.state}</div>
