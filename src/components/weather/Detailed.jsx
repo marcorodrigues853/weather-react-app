@@ -1,7 +1,6 @@
 import ItemBlock from './ItemBlock'
 
 function Detailed(currentWeather) {
-  console.log(currentWeather.forecast)
   return (
     <div className="card d-flex-center-around">
       <ItemBlock

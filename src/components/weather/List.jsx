@@ -1,7 +1,6 @@
 import ListItem from './ListItem'
 
 function List({ forecasts }) {
-  console.log('FORECASTS 69', forecasts)
   const list = forecasts.list.map((forecast, index) => (
     <ListItem
       key={index}
