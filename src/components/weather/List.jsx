@@ -1,12 +1,7 @@
 import ListItem from './ListItem'
 
 function List({ forecasts }) {
-  // console.log('LIST FORECAST', forecasts)
-
-  const hours = forecasts[0].list
-
-  // console.log('LISSTTT 232142432432', hours)
-  const list = forecasts[0].list.map((forecast, index) => (
+  const list = forecasts.list.map((forecast, index) => (
     <ListItem
       key={index}
       date={forecast.dt}

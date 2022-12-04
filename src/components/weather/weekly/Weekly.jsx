@@ -1,7 +1,6 @@
 import WeatherPreview from '../WeatherPreview'
 import NextWeather from './../NextWeather'
-function Weekly({ forecast }) {
-  console.log('WEATHER PREVIEW', forecast)
+function Weekly({ forecasts }) {
   const options = {
     weekday: 'long',
     year: 'numeric',
@@ -45,9 +44,9 @@ function Weekly({ forecast }) {
           </div>
         </div>
       </div>
-      <WeatherPreview forecast={forecast} />
+      <WeatherPreview forecasts={forecasts} />
 
-      <NextWeather forecast={forecast} />
+      <NextWeather forecasts={forecasts} />
 
       <span> ACABOU O DAILLLLYYYYYYYY</span>
     </div>

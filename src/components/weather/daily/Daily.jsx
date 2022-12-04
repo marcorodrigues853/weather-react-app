@@ -1,8 +1,7 @@
-import icon from './../../../assets/Icon-weather.png'
 import List from './../List'
 import ItemBlock from './../ItemBlock'
 
-function Daily({ forecast: currentWeather }) {
+function Daily({ currentWeather, forecasts }) {
   const options = {
     weekday: 'long',
     year: 'numeric',
@@ -10,16 +9,16 @@ function Daily({ forecast: currentWeather }) {
     day: 'numeric',
   }
 
-  console.log('69999', currentWeather)
-
   const weather = {
     date: new Date(currentWeather.dt).toLocaleDateString('us-US', options),
     icon: `http://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@2x.png`,
-    wind: currentWeather.wind.speed,
-    humidity: currentWeather.main.humidity,
-    temperature: currentWeather.main.temp,
-    state: currentWeather.weather[0].description,
-    visibility: currentWeather.visibility,
+    info: {
+      wind: currentWeather.wind.speed,
+      humidity: currentWeather.main.humidity,
+      temperature: currentWeather.main.temp,
+      state: currentWeather.weather[0].description,
+      visibility: currentWeather.visibility,
+    },
   }
 
   // const date = new Date(currentWeather.dt).toLocaleDateString('us-US', options)
@@ -32,19 +31,21 @@ function Daily({ forecast: currentWeather }) {
       <div className="card display-info">
         <ItemBlock
           state="Temperature"
-          unit={weather.temperature + 'º'}
+          unit={weather.info.temperature + 'º'}
         ></ItemBlock>
-        <ItemBlock state="Humidity" unit={weather.humidity + '%'}></ItemBlock>
+        <ItemBlock
+          state="Humidity"
+          unit={weather.info.humidity + '%'}
+        ></ItemBlock>
         <ItemBlock
           state="Visibility"
-          unit={weather.visibility / 1000 + ' km'}
+          unit={weather.info.visibility / 1000 + ' km'}
         ></ItemBlock>
       </div>
 
       <div className="next-hours-box">
         <span className="next-hours">Next hours:</span>
-        {/* <List forecast={forecast}></List> */}
-        {/* <ListItem></ListItem> */}
+        <List forecasts={forecasts}></List>
       </div>
     </div>
   )

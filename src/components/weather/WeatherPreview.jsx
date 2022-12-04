@@ -2,8 +2,7 @@ import icon from './../../assets/Icon-weather.png'
 import List from './List'
 import ItemBlock from './ItemBlock'
 
-function WeatherPreview({ forecast }) {
-  console.log('inside weather preview', forecast)
+function WeatherPreview({ forecasts }) {
   const options = {
     weekday: 'long',
     year: 'numeric',
@@ -29,7 +28,7 @@ function WeatherPreview({ forecast }) {
       {/* //!NEED TO BE OTHER COMPONENT */}
       <div className="next-hours-box">
         <span className="next-hours">Next hours:</span>
-        <List forecast={forecast}></List>
+        <List forecasts={forecasts}></List>
         {/* <ListItem></ListItem> */}
       </div>
     </div>
