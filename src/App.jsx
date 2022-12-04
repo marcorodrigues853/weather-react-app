@@ -69,6 +69,13 @@ function App() {
     },
   ]
 
+  const apiKey = import.meta.env.VITE_OPEN_WEATHER_MAP_KEY
+  console.log(
+    'teste ENVVVVV',
+    apiKey,
+    import.meta.env.VITE_OPEN_WEATHER_MAP_KEY,
+  )
+
   return (
     <div className="App">
       <div className="container">
