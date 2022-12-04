@@ -30,7 +30,7 @@ class OpenWeatherApi {
   }
 
   buildUrl() {
-    return `${url}?q=${this.#city}${this.#units}&appid=${this.#key}`
+    return `${this.#url}?q=${this.#city}${this.#units}&appid=${this.#key}`
   }
 
   getHourlyFormDay(day) {
