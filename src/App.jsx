@@ -7,6 +7,7 @@ import List from './components/weather/List'
 import Menu from './components/menu/Menu'
 
 import Daily from './components/weather/daily/Daily'
+import Weekly from './components/weather/weekly/Weekly'
 
 function App() {
   const forecast = [
@@ -72,15 +73,16 @@ function App() {
     <div className="App">
       <div className="container">
         <Header />
+
+        {/* //! need to be a component */}
+        <span>WEEKLY MENU falta passar comp</span>
+        <Weekly forecast={forecast}></Weekly>
+
         <Now forecast={forecast[0]} />
         <Detailed />
         <List forecast={forecast} />
         {/* //! need to be a component */}
         <span>DAILY MENU falta passar comp</span>
-        <Daily forecast={forecast}></Daily>
-
-        {/* //! need to be a component */}
-        <span>WEEKLY MENU falta passar comp</span>
         <Daily forecast={forecast}></Daily>
       </div>
 
