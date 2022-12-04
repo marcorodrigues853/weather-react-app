@@ -21,9 +21,6 @@ function Daily({ currentWeather, forecasts }) {
     },
   }
 
-  // const date = new Date(currentWeather.dt).toLocaleDateString('us-US', options)
-  // const icon = `http://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@2x.png`
-
   return (
     <div className="today-container">
       <div className="date">{weather.date}</div>

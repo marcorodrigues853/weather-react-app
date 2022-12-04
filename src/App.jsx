@@ -1678,12 +1678,12 @@ function App() {
             forecasts={fetchedData.data}
           ></Today>
         )}
-        {fetchedData.data && (
+        {/* {fetchedData.data && (
           <Daily
             currentWeather={currentWeather}
             forecasts={fetchedData.data}
           ></Daily>
-        )}
+        )} */}
         {fetchedData.data && <Weekly forecasts={fetchedData.data}></Weekly>}
       </div>
 
