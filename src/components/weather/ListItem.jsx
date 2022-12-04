@@ -9,6 +9,7 @@ function ListItem({ date, state = 'Sunny' }) {
     'Saturday',
   ]
   const dayNumber = new Date(date).getDay()
+  // console.log(date, dayNumber)
 
   return (
     <div className="item__next">
