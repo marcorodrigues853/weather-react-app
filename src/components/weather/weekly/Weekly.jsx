@@ -25,6 +25,39 @@ function Weekly({ forecast }) {
             <div className="percentage-info">78%</div>
           </div>
         </div>
+        <div className="week-box card">
+          <div className="day">18 koiso July</div>
+          <div className="box">
+            <div className="icon">ICON</div>
+            <div className="temperature">29º</div>
+          </div>
+          <div className="box">
+            <div className="humidity-info">Humidity</div>
+            <div className="percentage-info">78%</div>
+          </div>
+        </div>
+        <div className="week-box card">
+          <div className="day">18 koiso July</div>
+          <div className="box">
+            <div className="icon">ICON</div>
+            <div className="temperature">29º</div>
+          </div>
+          <div className="box">
+            <div className="humidity-info">Humidity</div>
+            <div className="percentage-info">78%</div>
+          </div>
+        </div>
+        <div className="week-box card">
+          <div className="day">18 koiso July</div>
+          <div className="box">
+            <div className="icon">ICON</div>
+            <div className="temperature">29º</div>
+          </div>
+          <div className="box">
+            <div className="humidity-info">Humidity</div>
+            <div className="percentage-info">78%</div>
+          </div>
+        </div>
       </div>
       <WeatherPreview forecast={forecast} />
 
