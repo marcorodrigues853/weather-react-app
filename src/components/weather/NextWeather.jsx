@@ -4,7 +4,6 @@ function NextWeather({ forecasts }) {
     <div className="next-hours-box">
       <span className="next-hours">Next hours:</span>
       <List forecasts={forecasts}></List>
-      {/* <ListItem></ListItem> */}
     </div>
   )
 }

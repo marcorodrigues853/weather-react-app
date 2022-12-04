@@ -5,7 +5,7 @@ function Today({ currentWeather, forecasts }) {
   return (
     <div className="today">
       <Now forecast={currentWeather} />
-      <Detailed />
+      <Detailed forecast={currentWeather} />
       <List forecasts={forecasts} />
     </div>
   )
