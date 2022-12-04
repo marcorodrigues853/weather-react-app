@@ -1,8 +1,6 @@
 import './App.css'
 import Header from './components/header/Header'
-
 import Today from './components/weather/Today'
-import List from './components/weather/List'
 import Menu from './components/menu/Menu'
 
 import Daily from './components/weather/daily/Daily'
@@ -12,13 +10,13 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 
 function App() {
-  const [fetchedData, setFetechedData] = useState([])
+  const [fetchedData, setFetchedData] = useState([])
   useEffect(() => {
     const getForecast = async () => {
       const forecast = await axios.get(
         'https://api.openweathermap.org/data/2.5/forecast?q=porto&units=metric&appid=ecf27fbed0f95dd7161d1a1aaea268df',
       )
-      setFetechedData(forecast)
+      setFetchedData(forecast)
     }
     getForecast()
   }, [null])
@@ -1671,10 +1669,19 @@ function App() {
       <div className="container">
         <Header />
 
-        <Today currentWeather={currentWeather} forecasts={forecasts}></Today>
-
-        <Daily currentWeather={currentWeather} forecasts={forecasts}></Daily>
-        <Weekly forecasts={forecasts}></Weekly>
+        {fetchedData.data && (
+          <Today
+            currentWeather={currentWeather}
+            forecasts={fetchedData.data}
+          ></Today>
+        )}
+        {fetchedData.data && (
+          <Daily
+            currentWeather={currentWeather}
+            forecasts={fetchedData.data}
+          ></Daily>
+        )}
+        {fetchedData.data && <Weekly forecasts={forecasts}></Weekly>}
       </div>
 
       <Menu></Menu>
