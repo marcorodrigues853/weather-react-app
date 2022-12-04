@@ -66,6 +66,8 @@ function App() {
     name: 'Porto',
     cod: 200,
   }
+
+  /*
   const forecasts = {
     cod: '200',
     message: 0,
@@ -1656,6 +1658,7 @@ function App() {
       cloudy: '60%',
     },
   ]
+  */
 
   // const apiKey = import.meta.env.VITE_OPEN_WEATHER_MAP_KEY
   // console.log(
@@ -1681,7 +1684,7 @@ function App() {
             forecasts={fetchedData.data}
           ></Daily>
         )}
-        {fetchedData.data && <Weekly forecasts={forecasts}></Weekly>}
+        {fetchedData.data && <Weekly forecasts={fetchedData.data}></Weekly>}
       </div>
 
       <Menu></Menu>

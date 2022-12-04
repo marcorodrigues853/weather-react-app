@@ -1,4 +1,9 @@
-function ListItem({ date, state = 'Sunny', icon: iconCode = '02d' }) {
+function ListItem({
+  date,
+  state = 'Sunny',
+  icon: iconCode = '02d',
+  temperature,
+}) {
   const weekday = [
     'Sunday',
     'Monday',
@@ -15,11 +20,10 @@ function ListItem({ date, state = 'Sunny', icon: iconCode = '02d' }) {
     <div className="item__next">
       <div className="week-day">{weekday[weekDayIndex]}</div>
       <div className="item__next--state">
-        {/* <ion-icon name="sunny-outline"></ion-icon> */}
         <img src={icon} alt="" className="icon-weather--small" />
         <div className="state">{state}</div>
       </div>
-      <div className="unit">11/13º</div>
+      <div className="unit">{temperature.toFixed()}º</div>
     </div>
   )
 }
