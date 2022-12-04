@@ -231,13 +231,15 @@ button:hover {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 1rem;
 }
 .day {
   font-size: 1rem;
   font-weight: bold;
 }
-.icon {
+.icon-weather {
+  height: 4rem;
 }
 .temperature {
   color: #a1c4fd;

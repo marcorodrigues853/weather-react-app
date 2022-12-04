@@ -17,7 +17,11 @@ function Weekly({ forecast }) {
         <div className="week-box card">
           <div className="day">18 koiso July</div>
           <div className="box">
-            <div className="icon">ICON</div>
+            <img
+              src="http://openweathermap.org/img/wn/10d@2x.png"
+              alt=""
+              className="icon-weather"
+            />
             <div className="temperature">29º</div>
           </div>
           <div className="box">
@@ -28,29 +32,11 @@ function Weekly({ forecast }) {
         <div className="week-box card">
           <div className="day">18 koiso July</div>
           <div className="box">
-            <div className="icon">ICON</div>
-            <div className="temperature">29º</div>
-          </div>
-          <div className="box">
-            <div className="humidity-info">Humidity</div>
-            <div className="percentage-info">78%</div>
-          </div>
-        </div>
-        <div className="week-box card">
-          <div className="day">18 koiso July</div>
-          <div className="box">
-            <div className="icon">ICON</div>
-            <div className="temperature">29º</div>
-          </div>
-          <div className="box">
-            <div className="humidity-info">Humidity</div>
-            <div className="percentage-info">78%</div>
-          </div>
-        </div>
-        <div className="week-box card">
-          <div className="day">18 koiso July</div>
-          <div className="box">
-            <div className="icon">ICON</div>
+            <img
+              src="http://openweathermap.org/img/wn/04n@2x.png"
+              alt=""
+              className="icon-weather"
+            />
             <div className="temperature">29º</div>
           </div>
           <div className="box">
