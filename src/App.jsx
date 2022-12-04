@@ -1671,17 +1671,17 @@ function App() {
       <div className="container">
         <Header />
 
-        {/* //! need to be a component */}
-
-        <Weekly forecasts={forecasts}></Weekly>
-
         <Now forecast={currentWeather} />
 
         <Detailed />
         <List forecasts={forecasts} />
+
         {/* //! need to be a component */}
-        <span>DAILY MENU falta passar comp</span>
+
         <Daily currentWeather={currentWeather} forecasts={forecasts}></Daily>
+
+        {/* //! need to be a component */}
+        <Weekly forecasts={forecasts}></Weekly>
       </div>
 
       <Menu></Menu>
