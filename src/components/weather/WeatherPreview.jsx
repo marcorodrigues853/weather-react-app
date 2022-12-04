@@ -17,7 +17,7 @@ function WeatherPreview({ forecast }) {
     <div className="today-container">
       <div className="date">{date}</div>
       <img
-        src="http://openweathermap.org/img/wn/02d@4x.png"
+        src="http://openweathermap.org/img/wn/02d@2x.png"
         className="state-preview"
       ></img>
       <div className="card display-info">

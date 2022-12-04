@@ -1,7 +1,5 @@
 import icon from './../../assets/Icon-weather.png'
 function Now({ forecast }) {
-  // console.table('NOW', forecast)
-
   const weather = forecast.weather[0]
   const info = forecast.main
   const icon = `http://openweathermap.org/img/wn/${weather.icon}@2x.png`

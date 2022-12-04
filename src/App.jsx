@@ -19,7 +19,7 @@ function App() {
         id: 802,
         main: 'Clouds',
         description: 'scattered clouds',
-        icon: '03d',
+        icon: '01d',
       },
     ],
     base: 'stations',
@@ -1663,12 +1663,12 @@ function App() {
         {/* <Weekly forecast={forecast}></Weekly> */}
 
         <Now forecast={currentWeather} />
-        {/* <Now forecast={forecast[0]} /> */}
+
         <Detailed />
         <List forecasts={forecasts} />
         {/* //! need to be a component */}
         <span>DAILY MENU falta passar comp</span>
-        {/* <Daily forecast={forecasts}></Daily> */}
+        <Daily forecast={currentWeather}></Daily>
       </div>
 
       <Menu></Menu>
