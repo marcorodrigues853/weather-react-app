@@ -4,7 +4,7 @@ function List({ forecasts }) {
   const list = forecasts.list.map((forecast, index) => (
     <ListItem
       key={index}
-      date={forecast.dt}
+      date={forecast.dt_txt}
       state={forecast.weather[0].description}
       icon={forecast.weather[0].icon}
       temperature={forecast.main.temp}

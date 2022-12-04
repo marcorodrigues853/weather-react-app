@@ -21,7 +21,7 @@ function App() {
     getForecast()
   }, [null])
 
-  // console.log(fetchedData.data)
+  console.log(fetchedData.data)
 
   const currentWeather = {
     coord: {
