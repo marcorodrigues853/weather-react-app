@@ -16,7 +16,10 @@ function WeatherPreview({ forecast }) {
   return (
     <div className="today-container">
       <div className="date">{date}</div>
-      <img src={icon} className="state-preview"></img>
+      <img
+        src="http://openweathermap.org/img/wn/02d@4x.png"
+        className="state-preview"
+      ></img>
       <div className="card display-info">
         <ItemBlock state="Temperature" unit="54 %"></ItemBlock>
         <ItemBlock state="Humidity" unit="54 %"></ItemBlock>

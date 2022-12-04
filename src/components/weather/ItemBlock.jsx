@@ -14,15 +14,15 @@ function ItemBlock({ icon, state, unit }) {
   // console.log('STATEEEE', images.cloudy)
   return (
     <div className="item-block">
-      {icon && (
+      {/* {icon && (
         <ion-icon
           name={icon}
           style={{ fontSize: 28, color: '#A3B7D7' }}
         ></ion-icon>
-      )}
+      )} */}
 
+      {icon && <img src="http://openweathermap.org/img/wn/02d@2x.png" alt="" />}
       {/* <img src={images[state]} alt="" /> */}
-
       <div className="item__box">
         <div className="item-type">{state}</div>
         <div className="item-detail">{unit}</div>
