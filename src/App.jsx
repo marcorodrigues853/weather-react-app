@@ -1,27 +1,27 @@
-import './App.css'
-import Header from './components/header/Header'
-import Today from './components/weather/Today'
-import Menu from './components/menu/Menu'
+import './App.css';
+import Header from './components/header/Header';
+import Today from './components/weather/Today';
+import Menu from './components/menu/Menu';
 
-import Daily from './components/weather/daily/Daily'
-import Weekly from './components/weather/weekly/Weekly'
-import { useEffect, useState } from 'react'
+import Daily from './components/weather/daily/Daily';
+import Weekly from './components/weather/weekly/Weekly';
+import { useEffect, useState } from 'react';
 
-import axios from 'axios'
+import axios from 'axios';
 
 function App() {
-  const [fetchedData, setFetchedData] = useState([])
+  const [fetchedData, setFetchedData] = useState([]);
   useEffect(() => {
     const getForecast = async () => {
       const forecast = await axios.get(
         'https://api.openweathermap.org/data/2.5/forecast?q=porto&units=metric&appid=ecf27fbed0f95dd7161d1a1aaea268df',
-      )
-      setFetchedData(forecast)
-    }
-    getForecast()
-  }, [null])
+      );
+      setFetchedData(forecast);
+    };
+    getForecast();
+  }, [null]);
 
-  console.log(fetchedData.data)
+  console.log('FETCHDATA', fetchedData.data);
 
   const currentWeather = {
     coord: {
@@ -65,7 +65,7 @@ function App() {
     id: 2735943,
     name: 'Porto',
     cod: 200,
-  }
+  };
 
   /*
   const forecasts = {
@@ -1678,18 +1678,18 @@ function App() {
             forecasts={fetchedData.data}
           ></Today>
         )}
-        {/* {fetchedData.data && (
+        {fetchedData.data && (
           <Daily
             currentWeather={currentWeather}
             forecasts={fetchedData.data}
           ></Daily>
-        )} */}
+        )}
         {fetchedData.data && <Weekly forecasts={fetchedData.data}></Weekly>}
       </div>
 
       <Menu></Menu>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

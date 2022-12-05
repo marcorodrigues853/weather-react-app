@@ -21,6 +21,7 @@ function Daily({ currentWeather, forecasts }) {
     },
   }
 
+  console.log('weather', weather, forecasts)
   return (
     <div className="today-container">
       <div className="date">{weather.date}</div>
