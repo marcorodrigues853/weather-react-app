@@ -12,9 +12,9 @@ function ListItem({
     'Thursday',
     'Friday',
     'Saturday',
-  ]
-  const weekDayIndex = new Date(date).getDay() ?? 0
-  const icon = `http://openweathermap.org/img/wn/${iconCode}@2x.png`
+  ];
+  const weekDayIndex = new Date(date).getDay() ?? 0;
+  const icon = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
   return (
     <div className="item__next">
@@ -25,7 +25,7 @@ function ListItem({
       </div>
       <div className="unit">{temperature.toFixed()}º</div>
     </div>
-  )
+  );
 }
 
-export default ListItem
+export default ListItem;

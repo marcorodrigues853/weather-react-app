@@ -1,6 +1,6 @@
-import cloudy from './../../assets/icons-png/cloudy.png'
-import wind from './../../assets/icons-png/wind.png'
-import humidity from './../../assets/icons-png/humidity.png'
+import cloudy from './../../assets/icons-png/cloudy.png';
+import wind from './../../assets/icons-png/wind.png';
+import humidity from './../../assets/icons-png/humidity.png';
 
 function ItemBlock({ icon, state, unit }) {
   return (
@@ -16,6 +16,6 @@ function ItemBlock({ icon, state, unit }) {
         <div className="item-detail">{unit}</div>
       </div>
     </div>
-  )
+  );
 }
-export default ItemBlock
+export default ItemBlock;

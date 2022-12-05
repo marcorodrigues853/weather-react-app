@@ -1,5 +1,3 @@
-function Icon(){
-
-}
+function Icon() {}
 
 export default Icon;

@@ -1,5 +1,5 @@
 function Item({ icon = 'bug-outline' }) {
-  return <ion-icon name={icon}></ion-icon>
+  return <ion-icon name={icon}></ion-icon>;
 }
 
-export default Item
+export default Item;

@@ -1,4 +1,4 @@
-import ItemBlock from './ItemBlock'
+import ItemBlock from './ItemBlock';
 
 function Detailed(currentWeather) {
   return (
@@ -19,7 +19,7 @@ function Detailed(currentWeather) {
         unit={currentWeather.forecast.visibility / 1000 + 'km'}
       ></ItemBlock>
     </div>
-  )
+  );
 }
 
-export default Detailed
+export default Detailed;

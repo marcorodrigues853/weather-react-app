@@ -1,6 +1,6 @@
-import icon from './../../assets/Icon-weather.png'
-import List from './List'
-import ItemBlock from './ItemBlock'
+import icon from './../../assets/Icon-weather.png';
+import List from './List';
+import ItemBlock from './ItemBlock';
 
 function WeatherPreview({ forecasts }) {
   const options = {
@@ -8,9 +8,9 @@ function WeatherPreview({ forecasts }) {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
-  }
+  };
 
-  const date = new Date().toLocaleDateString('us-US', options)
+  const date = new Date().toLocaleDateString('us-US', options);
 
   return (
     <div className="today-container">
@@ -32,6 +32,6 @@ function WeatherPreview({ forecasts }) {
         {/* <ListItem></ListItem> */}
       </div>
     </div>
-  )
+  );
 }
-export default WeatherPreview
+export default WeatherPreview;

@@ -8,6 +8,6 @@ function Header() {
       <span className="city-title">Florida</span>
       <ion-icon name="settings-outline" style={{ fontSize: 20 }}></ion-icon>
     </section>
-  )
+  );
 }
-export default Header
+export default Header;

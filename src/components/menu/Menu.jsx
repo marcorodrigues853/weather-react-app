@@ -1,4 +1,4 @@
-import Item from './Item'
+import Item from './Item';
 
 function Menu() {
   return (
@@ -8,7 +8,7 @@ function Menu() {
       <Item icon="location-outline"></Item>
       <Item icon="settings-outline"></Item>
     </div>
-  )
+  );
 }
 
-export default Menu
+export default Menu;

@@ -1,8 +1,8 @@
-import icon from './../../assets/Icon-weather.png'
+import icon from './../../assets/Icon-weather.png';
 function Now({ forecast }) {
-  const weather = forecast.weather[0]
-  const info = forecast.main
-  const icon = `http://openweathermap.org/img/wn/${weather.icon}@2x.png`
+  const weather = forecast.weather[0];
+  const info = forecast.main;
+  const icon = `http://openweathermap.org/img/wn/${weather.icon}@2x.png`;
 
   return (
     <div className="card now">
@@ -15,7 +15,7 @@ function Now({ forecast }) {
         <div className="now__state">{weather.description}</div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Now
+export default Now;

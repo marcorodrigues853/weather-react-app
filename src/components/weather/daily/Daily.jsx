@@ -1,5 +1,5 @@
-import List from './../List'
-import ItemBlock from './../ItemBlock'
+import List from './../List';
+import ItemBlock from './../ItemBlock';
 
 function Daily({ currentWeather, forecasts }) {
   const options = {
@@ -7,7 +7,7 @@ function Daily({ currentWeather, forecasts }) {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
-  }
+  };
 
   const weather = {
     date: new Date(currentWeather.dt).toLocaleDateString('us-US', options),
@@ -19,9 +19,9 @@ function Daily({ currentWeather, forecasts }) {
       state: currentWeather.weather[0].description,
       visibility: currentWeather.visibility,
     },
-  }
+  };
 
-  console.log('weather', weather, forecasts)
+  console.log('weather', weather, forecasts);
   return (
     <div className="today-container">
       <div className="date">{weather.date}</div>
@@ -46,6 +46,6 @@ function Daily({ currentWeather, forecasts }) {
         <List forecasts={forecasts}></List>
       </div>
     </div>
-  )
+  );
 }
-export default Daily
+export default Daily;

@@ -1,14 +1,14 @@
-import WeatherPreview from '../WeatherPreview'
-import NextWeather from './../NextWeather'
+import WeatherPreview from '../WeatherPreview';
+import NextWeather from './../NextWeather';
 function Weekly({ forecasts }) {
   const options = {
     weekday: 'long',
     year: 'numeric',
     month: 'long',
     day: 'numeric',
-  }
+  };
 
-  const date = new Date().toLocaleDateString('us-US', options)
+  const date = new Date().toLocaleDateString('us-US', options);
   return (
     <div className="teste">
       {date}
@@ -50,6 +50,6 @@ function Weekly({ forecasts }) {
 
       <span> ACABOU O DAILLLLYYYYYYYY</span>
     </div>
-  )
+  );
 }
-export default Weekly
+export default Weekly;

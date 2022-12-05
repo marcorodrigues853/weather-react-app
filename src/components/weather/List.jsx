@@ -1,4 +1,4 @@
-import ListItem from './ListItem'
+import ListItem from './ListItem';
 
 function List({ forecasts }) {
   const list = forecasts.list.map((forecast, index) => (
@@ -9,9 +9,9 @@ function List({ forecasts }) {
       icon={forecast.weather[0].icon}
       temperature={forecast.main.temp}
     ></ListItem>
-  ))
+  ));
 
-  return <div className="card list-item">{list}</div>
+  return <div className="card list-item">{list}</div>;
 }
 
-export default List
+export default List;
