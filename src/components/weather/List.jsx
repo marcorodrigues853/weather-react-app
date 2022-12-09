@@ -1,9 +1,9 @@
 import ListItem from './ListItem';
 
 function List({ forecasts }) {
-  const list = forecasts.list.map((forecast, key = crypto.randomUUID()) => (
+  const list = forecasts.list.map((forecast) => (
     <ListItem
-      key={key}
+      key={crypto.randomUUID()}
       date={forecast.dt_txt}
       state={forecast.weather[0].description}
       icon={forecast.weather[0].icon}
