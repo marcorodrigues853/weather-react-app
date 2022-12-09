@@ -8,7 +8,7 @@ function Now({ forecast }) {
     <div className="card now">
       <img src={icon} alt="" />
       <div className="info">
-        <div className="now__day">Tomorrow</div>
+        <div className="now__day">Today</div>
         <div className="now__unit">
           {info.temp_min.toFixed()}/{info.temp_max.toFixed()} º
         </div>
