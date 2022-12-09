@@ -11,10 +11,12 @@ import axios from 'axios';
 
 function App() {
   const [fetchedData, setFetchedData] = useState([]);
+
+  const apiKey = import.meta.env.VITE_OPEN_WEATHER_MAP_KEY;
   useEffect(() => {
     const getForecast = async () => {
       const forecast = await axios.get(
-        'https://api.openweathermap.org/data/2.5/forecast?q=porto&units=metric&appid=ecf27fbed0f95dd7161d1a1aaea268df',
+        `https://api.openweathermap.org/data/2.5/forecast?q=porto&units=metric&appid=${apiKey}`,
       );
       setFetchedData(forecast);
     };
