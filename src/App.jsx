@@ -2,6 +2,7 @@ import './App.css';
 import Header from './components/header/Header';
 import Today from './components/weather/Today';
 import Menu from './components/menu/Menu';
+import { Routes, Route } from 'react-router-dom';
 
 import Daily from './components/weather/daily/Daily';
 import Weekly from './components/weather/weekly/Weekly';
@@ -1671,7 +1672,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="container">
+      {/* <div className="container">
         <Header />
 
         {fetchedData.data && (
@@ -1687,7 +1688,21 @@ function App() {
           ></Daily>
         )}
         {fetchedData.data && <Weekly forecasts={fetchedData.data}></Weekly>}
-      </div>
+      </div> */}
+
+      {fetchedData.data && (
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Today
+                currentWeather={currentWeather}
+                forecasts={fetchedData.data}
+              />
+            }
+          />
+        </Routes>
+      )}
 
       <Menu></Menu>
     </div>
