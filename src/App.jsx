@@ -11,7 +11,6 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 function App() {
-  const [selectedCity, setSelectedCity] = useState('');
   const [fetchedData, setFetchedData] = useState([]);
   const [fetchedCurrentForecast, setFetchedCurrentForecast] = useState([]);
 

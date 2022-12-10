@@ -4,6 +4,7 @@ function Header() {
 
   function handleClick(e) {
     setSelectedCity(e.target.value);
+    console.log(e.target.value);
   }
 
   const geolocation = navigator.geolocation.getCurrentPosition(
@@ -12,7 +13,7 @@ function Header() {
         latitude: coords.latitude,
         longitude: coords.longitude,
       };
-      // console.log('position', position);
+      console.log('position', position);
       return position;
     },
     () => {
