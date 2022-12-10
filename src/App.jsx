@@ -11,25 +11,11 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 function App() {
+  const [selectedCity, setSelectedCity] = useState('');
   const [fetchedData, setFetchedData] = useState([]);
   const [fetchedCurrentForecast, setFetchedCurrentForecast] = useState([]);
 
-  const geolocation = navigator.geolocation.getCurrentPosition(
-    ({ coords }) => {
-      console.log('coords', coords);
-      const position = {
-        latitude: coords.latitude,
-        longitude: coords.longitude,
-      };
-      console.log('position', position);
-      return position;
-    },
-    () => {
-      alert("couldn't get current position");
-    },
-  );
-
-  console.log('geolocation', geolocation);
+  // console.log('geolocation', geolocation);
 
   const apiKey = import.meta.env.VITE_OPEN_WEATHER_MAP_KEY;
   useEffect(() => {
@@ -52,8 +38,8 @@ function App() {
     getCurrentWeather();
   }, [null]);
 
-  console.log('FETCHDATA', fetchedData.data);
-  console.log('fetchedCurrentForecast', fetchedCurrentForecast.data);
+  // console.log('FETCHDATA', fetchedData.data);
+  // console.log('fetchedCurrentForecast', fetchedCurrentForecast.data);
 
   return (
     <div className="App">
