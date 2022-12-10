@@ -9,8 +9,8 @@ import Weekly from './components/weather/weekly/Weekly';
 import { useEffect, useState } from 'react';
 
 import axios from 'axios';
-
 function App() {
+  const [selectedCity, setSelectedCity] = useState('PARIS');
   const [fetchedData, setFetchedData] = useState([]);
   const [fetchedCurrentForecast, setFetchedCurrentForecast] = useState([]);
 
@@ -20,22 +20,22 @@ function App() {
   useEffect(() => {
     const getForecast = async () => {
       const forecast = await axios.get(
-        `https://api.openweathermap.org/data/2.5/forecast?q=porto&units=metric&appid=${apiKey}`,
+        `https://api.openweathermap.org/data/2.5/forecast?q=${selectedCity}&units=metric&appid=${apiKey}`,
       );
       setFetchedData(forecast);
     };
     getForecast();
-  }, [null]);
+  }, [selectedCity]);
 
   useEffect(() => {
     const getCurrentWeather = async () => {
       const currentWeather = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?q=porto&units=metric&appid=${apiKey}`,
+        `https://api.openweathermap.org/data/2.5/weather?q=${selectedCity}&units=metric&appid=${apiKey}`,
       );
       setFetchedCurrentForecast(currentWeather);
     };
     getCurrentWeather();
-  }, [null]);
+  }, [selectedCity]);
 
   // console.log('FETCHDATA', fetchedData.data);
   // console.log('fetchedCurrentForecast', fetchedCurrentForecast.data);
@@ -43,7 +43,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <Header />
+        <Header setSelectedCity={setSelectedCity} selectedCity={selectedCity} />
         {/*
 
         {fetchedData.data && (
@@ -69,6 +69,7 @@ function App() {
                 <Today
                   currentWeather={fetchedCurrentForecast.data}
                   forecasts={fetchedData.data}
+                  selectedCity={selectedCity}
                 />
               }
             />

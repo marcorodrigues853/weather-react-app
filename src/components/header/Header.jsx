@@ -1,9 +1,9 @@
 import { useState } from 'react';
-function Header() {
-  const [selectedCity, setSelectedCity] = useState('Porto');
-
+function Header(params) {
+  console.log('params', params);
   function handleClick(e) {
-    setSelectedCity(e.target.value);
+    // setSelectedCity(e.target.value);
+    params.setSelectedCity(e.target.value);
     console.log(e.target.value);
   }
 
@@ -20,13 +20,13 @@ function Header() {
       alert("couldn't get current position");
     },
   );
-  console.log('selectedCity', selectedCity, geolocation);
+  console.log('selectedCity', geolocation);
   return (
     <section className="header">
       <button className="button">
         <ion-icon name="menu-outline" style={{ fontSize: 30 }}></ion-icon>
       </button>
-      <span className="city-title">{selectedCity}</span>
+      <span className="city-title">{params.selectedCity}</span>
       <input onChange={handleClick}></input>
 
       <ion-icon name="settings-outline" style={{ fontSize: 20 }}></ion-icon>
