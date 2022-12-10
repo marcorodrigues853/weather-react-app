@@ -6,6 +6,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import Daily from './components/weather/daily/Daily';
 import Weekly from './components/weather/weekly/Weekly';
+import SwitchMenu from './components/menu/SwitchMenu';
 import { useEffect, useState } from 'react';
 
 import axios from 'axios';
@@ -75,6 +76,7 @@ function App() {
             />
           </Routes>
         )}
+        <SwitchMenu></SwitchMenu>
         <Menu></Menu>
       </div>
     </div>

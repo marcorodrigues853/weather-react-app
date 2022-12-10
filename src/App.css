@@ -8,7 +8,7 @@
   padding: 0;
 }
 button:hover {
-  scale: 1.2;
+  /* scale: 1.2; */
 }
 .card {
   /* min-height: 3rem; */
@@ -214,4 +214,16 @@ button:hover {
 
 .icon-weather--small {
   height: 2.5rem;
+}
+
+.btn-switch-menu {
+  border: none;
+  padding: 1rem 4rem;
+  background-color: transparent;
+  border-radius: 100px;
+}
+
+.btn-switch-menu:active {
+  background-color: white;
+  color: #a1c4fd;
 }

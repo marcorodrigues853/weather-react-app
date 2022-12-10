@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import debounce from './../base/debounce.js';
+
 function Header(params) {
-  console.log('params', params);
   function handleClick(e) {
+    console.log('handleClick event', e);
     // setSelectedCity(e.target.value);
-    params.setSelectedCity(e.target.value);
+
+    if (e.key === 'Enter') params.setSelectedCity(e.target.value);
     console.log(e.target.value);
   }
 
@@ -20,14 +22,15 @@ function Header(params) {
       alert("couldn't get current position");
     },
   );
-  console.log('selectedCity', geolocation);
+
+  // console.log('selectedCity', geolocation);
   return (
     <section className="header">
       <button className="button">
         <ion-icon name="menu-outline" style={{ fontSize: 30 }}></ion-icon>
       </button>
       <span className="city-title">{params.selectedCity}</span>
-      <input onChange={handleClick}></input>
+      <input onKeyUp={handleClick}></input>
 
       <ion-icon name="settings-outline" style={{ fontSize: 20 }}></ion-icon>
     </section>
