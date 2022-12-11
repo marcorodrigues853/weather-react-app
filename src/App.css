@@ -11,7 +11,6 @@ button:hover {
   /* scale: 1.2; */
 }
 .card {
-  /* min-height: 3rem; */
   background-color: #fff;
   border-radius: 9px;
   box-shadow: 0 0.5rem 0.8rem rgb(0 0 0 / 15%);
@@ -55,9 +54,7 @@ button:hover {
   display: flex;
   align-items: center;
   gap: 2rem;
-  /* justify-content: space-around; */
   color: #fff;
-  /* height: 130px; */
 }
 
 .now__day {
@@ -87,7 +84,7 @@ button:hover {
 }
 
 .item-detail {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #2f3744;
 }
 
@@ -103,8 +100,8 @@ button:hover {
 
 .item__next:not(:last-child) {
   border-bottom: 1px solid #f1f3f9;
-  /* padding-bottom: 1rem; */
 }
+
 .item__next--state {
   display: flex;
   gap: 0.5rem;
@@ -181,6 +178,7 @@ button:hover {
   gap: 1rem;
   row-gap: 0.5rem;
 }
+
 .week-box {
   min-height: 3rem;
   display: flex;
@@ -189,6 +187,7 @@ button:hover {
   justify-content: center;
   gap: 0.5rem;
 }
+
 .box {
   width: 100%;
   display: flex;
@@ -196,17 +195,21 @@ button:hover {
   align-items: center;
   gap: 1rem;
 }
+
 .day {
   font-size: 1rem;
   font-weight: bold;
 }
+
 .icon-weather {
   height: 4rem;
 }
+
 .temperature {
   color: #a1c4fd;
   font-size: 1rem;
 }
+
 .percentage-info {
   font-size: 0.8rem;
   color: #2f3744;

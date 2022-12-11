@@ -77,8 +77,8 @@ function App() {
           </Routes>
         )}
         <SwitchMenu></SwitchMenu>
-        <Menu></Menu>
       </div>
+      <Menu></Menu>
     </div>
   );
 }
