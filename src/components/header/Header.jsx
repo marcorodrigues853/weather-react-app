@@ -1,12 +1,18 @@
+import { useState } from 'react';
 import debounce from './../base/debounce.js';
 
 function Header(params) {
-  function handleClick(e) {
-    console.log('handleClick event', e);
-    // setSelectedCity(e.target.value);
+  const [isShown, setIsShown] = useState(false);
 
-    if (e.key === 'Enter') params.setSelectedCity(e.target.value);
-    console.log(e.target.value);
+  function handleClick(e) {
+    // console.log('handleClick event', e);
+    // setSelectedCity(e.target.value);
+    if (e.key === 'Enter') {
+      params.setSelectedCity(e.target.value);
+      setIsShown(!isShown);
+    }
+
+    // console.log(e.target.value);
   }
 
   const geolocation = navigator.geolocation.getCurrentPosition(
@@ -15,7 +21,7 @@ function Header(params) {
         latitude: coords.latitude,
         longitude: coords.longitude,
       };
-      console.log('position', position);
+      // console.log('position', position);
       return position;
     },
     () => {
@@ -29,10 +35,24 @@ function Header(params) {
       <button className="button">
         <ion-icon name="menu-outline" style={{ fontSize: 30 }}></ion-icon>
       </button>
-      <span className="city-title">{params.selectedCity}</span>
-      <input type="text" className="input-search" onKeyUp={handleClick}></input>
-      <ion-icon name="search-outline" style={{ fontSize: 20 }}></ion-icon>
+      {!isShown && (
+        <span className="city-title" onClick={() => setIsShown(!isShown)}>
+          {params.selectedCity}
+        </span>
+      )}
 
+      {isShown && (
+        <div type="text" className="form-search">
+          <input
+            type="text"
+            className="input-search"
+            onKeyUp={handleClick}
+            required={true}
+            minLength={2}
+          ></input>
+          <ion-icon name="search-outline" style={{ fontSize: 20 }}></ion-icon>
+        </div>
+      )}
       <ion-icon name="settings-outline" style={{ fontSize: 20 }}></ion-icon>
     </section>
   );

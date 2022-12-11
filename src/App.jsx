@@ -11,7 +11,7 @@ import { useEffect, useState } from 'react';
 
 import axios from 'axios';
 function App() {
-  const [selectedCity, setSelectedCity] = useState('PARIS');
+  const [selectedCity, setSelectedCity] = useState('Paris');
   const [fetchedData, setFetchedData] = useState([]);
   const [fetchedCurrentForecast, setFetchedCurrentForecast] = useState([]);
 
@@ -20,20 +20,27 @@ function App() {
   const apiKey = import.meta.env.VITE_OPEN_WEATHER_MAP_KEY;
   useEffect(() => {
     const getForecast = async () => {
-      const forecast = await axios.get(
-        `https://api.openweathermap.org/data/2.5/forecast?q=${selectedCity}&units=metric&appid=${apiKey}`,
-      );
-      setFetchedData(forecast);
+      try {
+        const forecast = await axios.get(
+          `https://api.openweathermap.org/data/2.5/forecast?q=${selectedCity}&units=metric&appid=${apiKey}`,
+        );
+        setFetchedData(forecast);
+      } catch (error) {
+        alert('City not Found Paris will be displayed');
+        setSelectedCity('Paris');
+      }
     };
     getForecast();
   }, [selectedCity]);
 
   useEffect(() => {
     const getCurrentWeather = async () => {
-      const currentWeather = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${selectedCity}&units=metric&appid=${apiKey}`,
-      );
-      setFetchedCurrentForecast(currentWeather);
+      try {
+        const currentWeather = await axios.get(
+          `https://api.openweathermap.org/data/2.5/weather?q=${selectedCity}&units=metric&appid=${apiKey}`,
+        );
+        setFetchedCurrentForecast(currentWeather);
+      } catch (error) {}
     };
     getCurrentWeather();
   }, [selectedCity]);
@@ -61,7 +68,6 @@ function App() {
         )}
         {fetchedData.data && <Weekly forecasts={fetchedData.data}></Weekly>}
 */}
-
         {fetchedData.data && fetchedCurrentForecast.data && (
           <Routes>
             <Route
