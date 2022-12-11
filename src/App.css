@@ -62,7 +62,7 @@ button:hover {
 
 .now__day {
   color: currentColor;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
 }
 .now__unit {
   font-size: 2rem;
@@ -226,4 +226,19 @@ button:hover {
 .btn-switch-menu:active {
   background-color: white;
   color: #a1c4fd;
+}
+
+.menu-container {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.input-search {
+  border-radius: 9px;
+  height: 1.3rem;
+  color: #a1c4fd;
+  border: none;
+  padding: 0.2rem 0.5rem;
+  text-align: center;
 }

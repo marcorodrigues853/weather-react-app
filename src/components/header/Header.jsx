@@ -30,7 +30,8 @@ function Header(params) {
         <ion-icon name="menu-outline" style={{ fontSize: 30 }}></ion-icon>
       </button>
       <span className="city-title">{params.selectedCity}</span>
-      <input onKeyUp={handleClick}></input>
+      <input type="text" className="input-search" onKeyUp={handleClick}></input>
+      <ion-icon name="search-outline" style={{ fontSize: 20 }}></ion-icon>
 
       <ion-icon name="settings-outline" style={{ fontSize: 20 }}></ion-icon>
     </section>
