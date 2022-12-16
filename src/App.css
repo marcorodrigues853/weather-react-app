@@ -142,7 +142,7 @@ button:hover {
   justify-content: space-around;
   font-size: 1.3rem;
   background-color: #fff;
-  padding: 1rem;
+  padding: 1rem 0rem;
   position: fixed;
   bottom: 0;
 }

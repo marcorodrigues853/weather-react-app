@@ -52,22 +52,21 @@ function App() {
     <div className="App">
       <div className="container">
         <Header setSelectedCity={setSelectedCity} selectedCity={selectedCity} />
-        {/*
 
-        {fetchedData.data && (
+        {/* {fetchedData.data && (
           <Today
-            currentWeather={currentWeather}
+            currentWeather={fetchedCurrentForecast.data}
             forecasts={fetchedData.data}
           ></Today>
         )}
         {fetchedData.data && (
           <Daily
-            currentWeather={currentWeather}
+            currentWeather={fetchedCurrentForecast.data}
             forecasts={fetchedData.data}
           ></Daily>
         )}
-        {fetchedData.data && <Weekly forecasts={fetchedData.data}></Weekly>}
-*/}
+        {fetchedData.data && <Weekly forecasts={fetchedData.data}></Weekly>} */}
+
         {fetchedData.data && fetchedCurrentForecast.data && (
           <Routes>
             <Route
